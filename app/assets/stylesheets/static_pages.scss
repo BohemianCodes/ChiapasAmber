@@ -6,12 +6,19 @@ $black: #262525;
 $baby-powder: #FCFCFC;
 $snow: #FFFCF9;
 
+$sans-serif: Futura, sans-serif;
+$serif: Georgia, serif;
+
 body {
-  background-color: $snow;
+  background-color: $baby-powder;
 }
 
 h1, h2 {
-  font-family: Futura, sans-serif;
+  font-family: $sans-serif;
   color: $black;
   text-align: center;
+}
+
+p {
+  font-family: $serif;
 }
