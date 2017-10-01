@@ -9,8 +9,9 @@ $snow: #FFFCF9;
 $sans-serif: Futura, sans-serif;
 $serif: Georgia, serif;
 
-body {
+html, body {
   background-color: $baby-powder;
+  height: 100%;
 }
 
 h1, h2 {
@@ -21,4 +22,14 @@ h1, h2 {
 
 p {
   font-family: $serif;
+}
+
+// Navbar
+
+.navbar-brand {
+  padding: 4px 15px;
+}
+
+.navbar-header {
+  background-color: $baby-powder;
 }
