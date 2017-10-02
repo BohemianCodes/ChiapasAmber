@@ -5,10 +5,15 @@
 $black: #262525;
 $baby-powder: #FCFCFC;
 $snow: #FFFCF9;
+$footer: #F8F8F8;
 
 $sans-serif: Futura, sans-serif;
 $serif: Georgia, serif;
 
+html {
+  position: relative;
+  min-height: 100%;
+}
 html, body {
   background-color: $baby-powder;
   height: 100%;
@@ -32,4 +37,20 @@ p {
 
 .navbar-header {
   background-color: $baby-powder;
+}
+
+// Footer
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+/* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: $footer;
+
+  p {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
 }
