@@ -2,15 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lato|Varela+Round|Mukta+Malar|Magra|Muli');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lato|Varela+Round|Mukta+Malar|Magra|Muli|Acme');
 
 $black: #262525;
 $baby-powder: #FCFCFC;
 $snow: #FFFCF9;
 $footer: #F8F8F8;
 
-$header: 'Magra', sans-serif;
-$body: 'Muli', serif;
+$heading: 'Magra', sans-serif;
+$navigation: 'Muli', serif;
+$body: 'Acme', serif;
 
 html {
   position: relative;
@@ -27,7 +28,7 @@ html, body {
 // }
 
 h1, h3 {
-  font-family: $header;
+  font-family: $heading;
   color: $black;
   text-align: center;
   margin-bottom: 15px;
@@ -37,7 +38,11 @@ h1 {
   font-size: 3em;
 }
 
-p, nav {
+nav {
+  font-family: $navigation;
+}
+
+p {
   font-family: $body;
 }
 
@@ -57,7 +62,6 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-/* Set the fixed height of the footer here */
   height: 60px;
   background-color: $footer;
 
