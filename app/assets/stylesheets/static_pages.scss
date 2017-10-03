@@ -2,13 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lato');
+
 $black: #262525;
 $baby-powder: #FCFCFC;
 $snow: #FFFCF9;
 $footer: #F8F8F8;
 
 $header: 'Encode Sans Expanded', sans-serif;
-$serif: Georgia, serif;
+$body: 'Lato', serif;
 
 html {
   position: relative;
@@ -30,8 +32,8 @@ h1, h3 {
   text-align: center;
 }
 
-p {
-  font-family: $serif;
+p, nav {
+  font-family: $body;
 }
 
 // Navbar
@@ -56,6 +58,6 @@ footer {
 
   p {
     padding-top: 18px;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }
