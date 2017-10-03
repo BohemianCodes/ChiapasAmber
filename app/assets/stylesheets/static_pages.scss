@@ -7,7 +7,7 @@ $baby-powder: #FCFCFC;
 $snow: #FFFCF9;
 $footer: #F8F8F8;
 
-$sans-serif: Futura, sans-serif;
+$header: 'Encode Sans Expanded', sans-serif;
 $serif: Georgia, serif;
 
 html {
@@ -24,8 +24,8 @@ html, body {
 //   margin-bottom: 60px;
 // }
 
-h1, h2 {
-  font-family: $sans-serif;
+h1, h3 {
+  font-family: $header;
   color: $black;
   text-align: center;
 }
