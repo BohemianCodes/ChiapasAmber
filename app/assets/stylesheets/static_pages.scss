@@ -3,15 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lato|Varela+Round|Mukta+Malar|Magra|Muli|Acme');
-
-$black: #262525;
-$baby-powder: #FCFCFC;
-$snow: #FFFCF9;
-$footer: #F8F8F8;
-
-$heading: 'Magra', sans-serif;
-$navigation: 'Muli', serif;
-$body: 'Acme', serif;
+@import 'variables';
 
 html {
   position: relative;
@@ -31,7 +23,7 @@ h1, h3 {
   font-family: $heading;
   color: $black;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 h1 {
