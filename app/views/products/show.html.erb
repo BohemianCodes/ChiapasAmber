@@ -4,14 +4,17 @@
   <%= @product.name %>
 </h4>
 
-<p class="products_description">
   <%= image_tag(@product.image_url, size: "500x500", class: "img-responsive p_img") %>
-</p>
 
 <p class="products_description">
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
+<p class="products_price">
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
