@@ -2,6 +2,19 @@
 
 <h2>Products</h2>
 
+<div class="container">
+ <div class="row">
+   <% @products.each do |product| %>
+     <div class="col-md-3">
+       <%= image_tag(product.image_url, class: "img-responsive") %>
+       <p>Name</p>
+       <p>Description</p>
+       <p>Price</p>
+     </div>
+   <% end %>
+ </div>
+</div>
+
 <table>
   <thead>
     <tr>
