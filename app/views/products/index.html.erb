@@ -3,19 +3,22 @@
 <h2>Products</h2>
 
 <div class="container">
- <div class="row">
-   <% @products.each do |product| %>
-     <div class="col-md-3">
-       <%= image_tag(product.image_url, class: "img-responsive") %>
-       <p>Name</p>
-       <p>Description</p>
-       <p>Price</p>
-     </div>
-   <% end %>
- </div>
+  <div class = "row">
+    <% @products.each do |product| %>
+      <div class="col-md-3">
+        <%= image_tag(product.image_url, size: "100x100", class: "img-responsive p_img") %>
+        <p class="p_name"><%= product.name %></p>
+        <p class="p_description"><%= product.description %></p>
+        <p></p>
+        <p><%= link_to 'Show', product %></p>
+        <p><%= link_to 'Edit', edit_product_path(product) %></p>
+        <p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -39,7 +42,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 

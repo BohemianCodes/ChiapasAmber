@@ -5,18 +5,12 @@
 </h4>
 
 <p class="products_description">
-  <strong>Description:</strong>
-  <%= @product.description %>
+  <%= image_tag(@product.image_url, size: "500x500", class: "img-responsive p_img") %>
 </p>
 
 <p class="products_description">
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p class="products_color">
-  <strong>Colour:</strong>
-  <%= @product.colour %>
+  <strong>Description:</strong>
+  <%= @product.description %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
