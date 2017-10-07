@@ -1,3 +1,8 @@
 <h2>Featured Product:</h2>
-<%= @featured_product.name %>
-<%= @featured_product.description %>
+
+<div class="feat_product">
+  <%= image_tag(@featured_product.image_url, size: "400x400", class: "img-responsive p_img") %>
+  <p><%= @featured_product.name %></p>
+  <p><%= @featured_product.description %></p>
+  <p>€ <%= @featured_product.price %></p>
+</div>
