@@ -2,26 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lato|Varela+Round|Mukta+Malar|Magra|Muli|Acme');
 @import 'variables';
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-html, body {
-  background-color: $baby-powder;
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.container-fluid {
-  flex: 1;
-}
 
 h1, h3 {
   font-family: $heading;
@@ -40,27 +22,4 @@ nav {
 
 p {
   font-family: $body;
-}
-
-// Navbar
-
-.navbar-brand {
-  padding: 4px 15px;
-}
-
-.navbar-header {
-  background-color: $baby-powder;
-}
-
-// Footer
-
-footer {
-  width: 100%;
-  height: 60px;
-  background-color: $footer;
-
-  p {
-    padding-top: 18px;
-    font-size: 1.1em;
-  }
 }
