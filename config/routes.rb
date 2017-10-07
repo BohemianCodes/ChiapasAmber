@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
   resources :products
+  
   root 'static_pages#landing_page'
-
-  get 'demo/index'
 
   get 'static_pages/about'
 
