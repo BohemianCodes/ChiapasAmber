@@ -23,3 +23,17 @@ nav {
 p {
   font-family: $body;
 }
+
+// Carousel
+
+.carousel-inner .item {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 85%;
+  color: $black;
+  font-size: 1.5em;
+}
