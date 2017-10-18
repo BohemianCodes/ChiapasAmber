@@ -49,7 +49,7 @@ body {
 
 .navbar {
   background-color: $pink;
-  height: 60px;
+  height: 60px !important;
 }
 
 .navbar-nav a {
@@ -57,6 +57,10 @@ body {
   font-size: 1.5em;
   font-family: 'Poiret One';
   margin-top: 6px;
+}
+
+.navbar-form {
+  margin-top: 12px;
 }
 
 // Footer
