@@ -6,7 +6,7 @@
 
 
 h1, h3 {
-  font-family: $heading;
+  font-family: $poiret-font;
   color: $black;
   text-align: center;
   margin-bottom: 20px;
@@ -17,11 +17,11 @@ h1 {
 }
 
 nav {
-  font-family: $navigation;
+  font-family: $muli-font;
 }
 
 p {
-  font-family: $body;
+  font-family: $acme-font;
 }
 
 // Carousel

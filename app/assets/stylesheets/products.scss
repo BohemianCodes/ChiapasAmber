@@ -5,7 +5,7 @@
 @import 'variables';
 
 h2 {
-  font-family: $heading;
+  font-family: $poiret-font;
   color: $black;
   text-align: center;
   margin-bottom: 50px;
@@ -19,7 +19,7 @@ h2 {
 // Show Page
 
 h4 {
-  font-family: $heading;
+  font-family: $poiret-font;
   color: $black;
   text-align: left;
   margin-bottom: 20px;
@@ -27,7 +27,7 @@ h4 {
 }
 
 p.products_description, {
-  font-family: $navigation;
+  font-family: $muli-font;
   font-size: 1.2em;
 }
 
@@ -36,7 +36,7 @@ p.products_price {
 }
 
 a {
-  font-family: $navigation;
+  font-family: $muli-font;
 }
 
 // Featured product
@@ -47,7 +47,7 @@ a {
 
 .edit_form {
   width: 300px;
-  font-family: $navigation;
+  font-family: $muli-font;
 }
 
 .btn-block {
