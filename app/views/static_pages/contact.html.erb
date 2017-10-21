@@ -1,4 +1,30 @@
 <h1>Contact Us</h1>
-<p>Email: chiapascolors@gmail.com</p>
+
+<div class="container-fluid form-container">
+
+  <%= flash[:notice] %>
+  <div class="contact-form">
+    <%= form_with(url: "/static_pages/thank_you") do |form| %>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+          </div>
+          <div class="form-group">
+            <%= form.label :email, "Email Address" %>
+            <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+          </div>
+          <div class="form-group">
+            <%= form.label :message %>
+            <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: "3" %>
+          </div>
+          <%= form.submit "Send", class: "btn btn-info btn-block" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <%= image_tag("sancris.jpg", alt: "San Cristobal", class: "img-responsive banner") %>
