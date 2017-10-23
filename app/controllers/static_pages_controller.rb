@@ -20,6 +20,7 @@ class StaticPagesController < ApplicationController
       to: 'bohemiancodes@gmail.com',
       subject: "A new contact form message from #{@name}",
       body: @message).deliver_now
+    UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
 end
