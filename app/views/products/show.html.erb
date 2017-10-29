@@ -4,14 +4,14 @@
   <%= @product.name %>
 </h4>
 
-  <%= image_tag(@product.image_url, size: "500x500", class: "img-responsive p_img") %>
+  <%= image_tag(@product.image_url, size: "400x400", class: "img-responsive img-thumbnail p_img") %>
 
 <p class="products_description">
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 <p class="products_price">
-  <strong>Price:</strong>
+  <strong>Price: €</strong>
   <%= @product.price %>
 </p>
 
