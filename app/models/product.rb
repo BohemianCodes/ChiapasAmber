@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   has_many :comments
 
   validates :name, presence: true
+  validates :image_url, :format => URI::regexp(%w(http https))
 
   def self.search(search_term)
     if Rails.env.production?
