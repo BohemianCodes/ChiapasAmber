@@ -12,9 +12,6 @@ class UserMailer < ApplicationMailer
   # 1- pass the user
   # 2- pass the email and the name
   # I'll show you both
-  # You get this ?
-  # ok
-  # Lets try it out
   def welcome(email)
     @url = 'https://colorsofchiapas.herokuapp.com/users/sign_in'
     mail(from: 'bohemiancodes@gmail.com',
