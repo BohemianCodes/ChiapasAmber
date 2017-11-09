@@ -27,7 +27,10 @@ class CommentsController < ApplicationController
   private
 
     def comment_params
-      params.require(:comment).permit(:user_id, :body, :rating)
+      # here we should only set the params that
+      # the user should be able to change, so not the
+      # user_id
+      params.require(:comment).permit(:body, :rating)
     end
 
 end
