@@ -8,7 +8,7 @@ class Ability
      if user.admin?
          can :manage, :all
       else
-        can :manage, Comment, id: user.id
+        can :manage, Comment, user_id: user.id
         can :read, Comment
 
         can :read, Product
@@ -16,8 +16,6 @@ class Ability
         can :manage, User, id: user.id
 
       end
-
-    can :delete, Comment
 
     # Define abilities for the passed in user here. For example:
     #
