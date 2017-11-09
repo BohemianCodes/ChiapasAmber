@@ -34,7 +34,7 @@ RSpec.configure do |config|
   # For Devise >= 4.1.0
   # config.include Devise::Test::ControllerHelpers, :type => :controller
   # Use the following instead if you are on Devise <= 4.1.1
-  config.include Devise::TestHelpers, :type => :controller
+  config.include Devise::Test::ControllerHelpers, :type => :controller
 end
 
 RSpec.configure do |config|
@@ -65,4 +65,16 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+end
+
+# Shoulda Matchers added code from Installation Readme
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
+
+    # Choose one or more libraries:
+    # Or, choose the following (which implies all of the above):
+    with.library :rails
+  end
 end

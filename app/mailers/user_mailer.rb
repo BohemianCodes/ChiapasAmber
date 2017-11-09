@@ -13,7 +13,7 @@ class UserMailer < ApplicationMailer
   # 2- pass the email and the name
   # I'll show you both
   def welcome(email)
-    @url =  new_user_session_url
+    @url =  'https://colorsofchiapas.herokuapp.com/users/sign_in'
     mail(from: 'bohemiancodes@gmail.com',
     to: email,
     subject: "Welcome to Colors of Chiapas!")
