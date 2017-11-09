@@ -8,4 +8,5 @@ describe Order do
   context "belongs to User" do
     it { should belong_to (:user)}
   end
-end
+
+end # describe

@@ -10,12 +10,17 @@ describe User do
     it {should have_many (:comments)}
   end
 
-  context "when User is created" do
-    let(:user) {User.new(email: "", password: 123456)}
+  context "email-presence is validated" do
+    it {should validate_presence_of (:email) }
+  end
+  # replaces:
+  # context "when User is created" do
+  #   let(:user) {User.new(email: "", password: 123456)}  
+  #    it "is not valid without email" do
+  #      expect(user).not_to be_valid
+  #    end
 
-    it "is not valid without email" do
-      expect(user).not_to be_valid
-    end
+
   end
 
 end
