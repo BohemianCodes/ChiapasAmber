@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe UsersController, type: :controller do
   let(:user) {User.create!(email: "eliane@example.com", password: "123456")}
+  let(:user2) {User.create!(email: "user2@user2.com", password: "234567")}
   describe 'GET #show' do
     context "when a user is logged_in" do
       before do
@@ -19,6 +20,13 @@ describe UsersController, type: :controller do
         get :show, params: { id: user.id }
         expect(response).to redirect_to(new_user_session_path)
       end # it
+    end #context
+
+    context "when a user is trying to view another user" do
+      it 'redirects to login' do
+        get :show, params: { id: user2.id }
+        expect(response).to redirect_to(root_path)
+      end
     end #context
   end #describe GET
 end #describe ÚserController
