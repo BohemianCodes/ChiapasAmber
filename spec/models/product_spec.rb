@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 describe Product do
+
+  context "has many Orders" do
+    it {should have_many (:orders)}
+  end
+
+  context "has many Comments" do
+    it {should have_many (:comments)}
+  end
+
   context "when the product has comments" do
     let(:product) {Product.create!(name: "Amber", image_url: "http://www.example.com")}
     let(:user) {User.create!(email: "eliane@gmail.com", password: "123456")}
