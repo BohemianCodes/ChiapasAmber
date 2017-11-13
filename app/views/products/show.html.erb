@@ -9,28 +9,35 @@
   <%= link_to 'Back', products_path %>
 <p>
 
-  <%= image_tag(@product.image_url, size: "400x400", class: "img-responsive img-thumbnail p_img") %>
+<div class ="row">
+  <div class="col-md-5">
 
-<p class="products_description">
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-<p class="products_price">
-  <strong>Price: €</strong>
-  <%= @product.price %>
-</p>
-<p>Average Rating:
-  <div class="rated" data-score="<%= @product.average_rating %>"></div>
-</p>
+    <%= image_tag(@product.image_url, size: "400x400", class: "img-responsive img-thumbnail p_img") %>
 
-<hr>
-<%= form_with(url: '/payments/create') do |form| %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
+    <p class="products_description">
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
+    <p class="products_price">
+      <strong>Price: €</strong>
+      <%= @product.price %>
+    </p>
+  </div> <!--col-->
+  <div class="col-md-5 col-md-offset-2">
+    <p>Average Rating:
+      <div class="rated" data-score="<%= @product.average_rating %>"></div>
+    </p>
 
-<hr>
+    <hr>
+    <%= form_with(url: '/payments/create') do |form| %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
 
-<%= render 'new_comment' %>
-<%= render 'comments' %>
+    <hr>
 
-<%= will_paginate @comments %>
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
+
+    <%= will_paginate @comments %>
+  </div> <!--col-->
+</div> <!-- row -->
