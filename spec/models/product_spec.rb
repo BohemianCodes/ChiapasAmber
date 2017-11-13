@@ -11,7 +11,7 @@ describe Product do
   end
 
   context "when the product has comments" do
-    let(:product) {Product.create!(name: "Amber", image_url: "http://www.example.com")}
+    let(:product) {FactoryBot.create(:product)}
     let(:user) {FactoryBot.create(:user)}
     before do
       product.comments.create!(rating: 1, user: user, body: "Awful!")
@@ -26,7 +26,7 @@ describe Product do
   end
 
   context "when Product has no name" do
-    let(:product) {Product.new(name: "", image_url: "http://www.example.com")}
+    let(:product) {FactoryBot.build(:product, name: "", image_url: "http://www.example.com")}
 
     it "is not valid without a name" do
       expect(product).not_to be_valid
