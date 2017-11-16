@@ -5,7 +5,8 @@ class PaymentsController < ApplicationController
     if user_signed_in?
       @user = current_user
     else
-        redirect_to  new_user_registration_path
+      redirect_to new_user_registration_path
+      return
     end
     token = params[:stripeToken]
   # Create the charge on Stripe's servers - this will charge the user's card
