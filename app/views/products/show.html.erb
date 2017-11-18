@@ -12,7 +12,7 @@
 <div class ="row">
   <div class="col-md-5">
 
-    <%= image_tag(@product.image_url, size: "500x500", class: "img-responsive img-thumbnail p_img") %>
+    <%= image_tag(@product.image_url, width: "500", class: "img-responsive img-thumbnail p_img img_zoom", data_zoom_image: @product.image_url) %>
 
     <p class="products_description">
       <strong>Description:</strong>
