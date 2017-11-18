@@ -15,9 +15,6 @@
     <% @products.each_with_index do |product, index| %>
       <div class="item <%= 'active' if index == 0 %> ">
         <%= image_tag(product.image_url) %>
-        <div class="carousel-caption">
-          <p><%= product.name %></p>
-        </div>
       </div>
     <% end %>
   </div>
