@@ -37,6 +37,7 @@ gem 'cancancan', '~> 2.0'
 gem 'will_paginate', '~> 3.1.0'
 gem 'stripe'
 gem 'redis-rails'
+gem 'dalli'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
