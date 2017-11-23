@@ -5,15 +5,9 @@
 <div class="container">
   <% cache @products do %>
     <% @products.in_groups_of(4, false) do |grouped_products| %>
-      <div class="row">
-        <%= render grouped_products %>
-        <!-- shorthand for  -->
-        <%# @products.each do |product| %>
-          <%#= render product %>
-            <!-- shorthand for: -->
-            <%#= render partial: "product", locals: {product: product} %>
-        <%# end %>
-      </div>
+    <div class="row">
+      <%= render grouped_products %>
+    </div>
     <% end %>
   <% end %>
 </div>
