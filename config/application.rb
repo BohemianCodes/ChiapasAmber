@@ -27,5 +27,8 @@ module ChiapasAmber
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    #Redis config
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
   end
 end
