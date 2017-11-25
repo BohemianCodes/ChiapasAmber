@@ -9,7 +9,7 @@
   <%= link_to 'Back', products_path %>
 <p>
 
-<div class ="row">
+<div class ="row" data-product-id="<%= @product.id %>">
   <div class="col-md-5">
 
     <%= image_tag(@product.image_url, width: "500", class: "img-responsive img-thumbnail p_img img_zoom", data_zoom_image: @product.image_url) %>
