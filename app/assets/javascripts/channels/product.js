@@ -7,9 +7,10 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     // Called when the subscription has been terminated by the server
   },
 
-  received: function() {
+  received: function(data) {
     // Called when there's incoming data on the websocket for this channel
     $(".alert.alert-info").show();
+    console.log(data);
   },
 
   listen_to_comments: function() {
@@ -19,6 +20,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
   }
 });
 
-$(document).on('turbolinks:load', function() {
+
+$(document).on('load turbolinks:load', function() {
   App.product.listen_to_comments();
 });
