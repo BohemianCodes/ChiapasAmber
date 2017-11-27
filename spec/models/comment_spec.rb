@@ -20,4 +20,15 @@ describe Comment do
     end #it
   end #context
 
+  context "comment has no body" do
+    let(:product) {FactoryBot.create(:product)}
+    let(:user) {FactoryBot.create(:user)}
+    let(:comment) {FactoryBot.build(:comment, rating: 3, body: "")}
+    it "is not a valid comment" do
+      expect(comment).not_to be_valid
+    end
+  end
+
+
+
 end #describe

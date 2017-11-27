@@ -32,4 +32,14 @@ describe Product do
       expect(product).not_to be_valid
     end
   end
+
+  context "when Product has an invalid url" do
+    let(:product) {FactoryBot.build(:product, name: "Jewelery", image_url: "no-validurl")}
+
+    it "is not valid without a valid url" do
+      expect(product).not_to be_valid
+    end
+  end
+
+
 end

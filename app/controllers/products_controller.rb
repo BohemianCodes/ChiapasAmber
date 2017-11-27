@@ -3,8 +3,6 @@ class ProductsController < ApplicationController
 
   load_and_authorize_resource
 
-  # GET /products
-  # GET /products.json
   def index
     if params[:q]
       search_term = params[:q]
@@ -14,23 +12,17 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 3).order('created_at DESC')
   end
 
-  # GET /products/new
   def new
     @product = Product.new
   end
 
-  # GET /products/1/edit
   def edit
   end
 
-  # POST /products
-  # POST /products.json
   def create
     @product = Product.new(product_params)
 
@@ -45,8 +37,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /products/1
-  # PATCH/PUT /products/1.json
   def update
     respond_to do |format|
       if @product.update(product_params)
@@ -59,8 +49,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.json
   def destroy
     @product.destroy
     respond_to do |format|
