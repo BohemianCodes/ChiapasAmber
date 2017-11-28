@@ -47,8 +47,6 @@ RSpec.describe ProductsController, type: :controller do
       get :new
       expect(controller).to set_flash[:alert]
     end
-
   end
-
 
 end
