@@ -3,11 +3,9 @@ require 'rails_helper'
 RSpec.describe ProductsController, type: :controller do
 
   let(:product) {FactoryBot.create(:product)}
-  let(:user) {FactoryBot.create(:user, admin: true)}
+  let(:user) {FactoryBot.create(:user)}
+  let(:admin) {FactoryBot.create(:admin)}
 
-  before do
-    sign_in user
-  end
 
   context 'GET #index' do
     it 'renders the index template' do
@@ -26,13 +24,30 @@ RSpec.describe ProductsController, type: :controller do
     end
   end
 
-  context 'GET #new' do
+  context 'GET #new as admin' do
+
+    before do
+      sign_in admin
+    end
 
     it 'renders new product form' do
       get :new
       expect(response).to be_ok
       expect(response).to render_template('new')
     end
+  end
+
+  context 'GET #new as logged_in user' do
+
+    before do
+      sign_in user
+    end
+
+    it 'shows flash: not authorized' do
+      get :new
+      expect(controller).to set_flash[:alert]
+    end
+
   end
 
 

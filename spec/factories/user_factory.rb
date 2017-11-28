@@ -5,6 +5,12 @@ FactoryBot.define do
         password "123456"
     end
 
+    factory :admin, class: User do
+      email "peter2@example.com"
+      password "qwertyuiop"
+      admin true
+    end
+
     factory :product do
         name "Amber"
         image_url "http://www.example.com"
